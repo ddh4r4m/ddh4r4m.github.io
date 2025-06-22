@@ -11,8 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <!-- Modern Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Premium Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -23,691 +26,501 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/MotionPathPlugin.min.js"></script>
     
-    <!-- Three.js for 3D effects -->
+    <!-- Three.js Advanced Suite -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
     
-    <!-- Splitting.js for text animations -->
+    <!-- Advanced Animation Libraries -->
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    
+    <!-- WebGL Effects -->
+    <script src="https://cdn.jsdelivr.net/npm/curtainsjs@8.1.4/dist/curtains.min.js"></script>
     
     <!-- Locomotive Scroll for smooth scrolling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/advanced-portfolio.css">
+    <link rel="stylesheet" href="css/ultra-premium.css">
 </head>
 <body data-scroll-container>
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-content">
-            <div class="preloader-logo">
-                <svg width="100" height="100" viewBox="0 0 100 100">
-                    <path class="preloader-path" d="M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" 
-                          stroke="#6366f1" stroke-width="4" fill="none" 
-                          stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
-                </svg>
-            </div>
-            <div class="preloader-text">Loading Experience</div>
-            <div class="preloader-progress">
-                <div class="preloader-progress-bar"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Custom Cursor -->
-    <div class="custom-cursor">
-        <div class="cursor-dot"></div>
-        <div class="cursor-outline"></div>
-        <div class="cursor-text"></div>
-    </div>
-
-    <!-- Noise Texture Overlay -->
-    <div class="noise-overlay"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar" data-scroll-sticky>
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <a href="#hero" data-cursor="pointer">
-                    <span class="logo-text">DD</span>
-                    <span class="logo-subtitle">Developer</span>
-                </a>
-            </div>
+    <!-- Ultra-Premium Navigation -->
+    <nav class="ultra-nav">
+        <div class="ultra-nav-inner">
+            <a href="#hero" class="ultra-nav-logo" data-magnetic="0.2">DD</a>
             
-            <div class="navbar-menu">
-                <a href="#about" class="nav-link" data-cursor="pointer">
-                    <span data-text="About">About</span>
-                </a>
-                <a href="#skills" class="nav-link" data-cursor="pointer">
-                    <span data-text="Skills">Skills</span>
-                </a>
-                <a href="#portfolio" class="nav-link" data-cursor="pointer">
-                    <span data-text="Work">Work</span>
-                </a>
-                <a href="#photography" class="nav-link" data-cursor="pointer">
-                    <span data-text="Photos">Photos</span>
-                </a>
-                <a href="#contact" class="nav-link" data-cursor="pointer">
-                    <span data-text="Contact">Contact</span>
-                </a>
-            </div>
-
-            <div class="navbar-actions">
-                <button class="theme-toggle" data-cursor="pointer">
-                    <span class="theme-icon"></span>
-                </button>
-                <button class="menu-toggle" data-cursor="pointer">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+            <ul class="ultra-nav-menu">
+                <li><a href="#about" class="ultra-nav-link" data-cursor>About</a></li>
+                <li><a href="#experience" class="ultra-nav-link" data-cursor>Experience</a></li>
+                <li><a href="#work" class="ultra-nav-link" data-cursor>Work</a></li>
+                <li><a href="#photography" class="ultra-nav-link" data-cursor>Photography</a></li>
+                <li><a href="#contact" class="ultra-nav-link" data-cursor>Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Hero Section with WebGL Background -->
-    <section class="hero-section" id="hero" data-scroll-section>
-        <div class="hero-background">
-            <canvas id="hero-canvas"></canvas>
-            <div class="hero-particles"></div>
+    <!-- Ultra-Premium Hero Section -->
+    <section class="ultra-hero" id="hero" data-scroll-section>
+        <div class="ultra-hero-bg">
+            <div class="ultra-hero-bg-shape" data-parallax="0.3"></div>
         </div>
         
-        <div class="hero-content">
-            <div class="hero-intro" data-scroll data-scroll-speed="2">
-                <div class="hero-label">
-                    <span class="label-text">Hello, I'm</span>
-                    <span class="label-line"></span>
-                </div>
-                
-                <h1 class="hero-title" data-splitting>
-                    <span class="line">Dharam</span>
-                    <span class="line gradient-text">Dhurandhar</span>
-                </h1>
-                
-                <div class="hero-roles">
-                    <span class="role-prefix">I craft</span>
-                    <span class="role-carousel">
-                        <span class="role-item active">Beautiful Interfaces</span>
-                        <span class="role-item">Scalable Systems</span>
-                        <span class="role-item">Mobile Experiences</span>
-                        <span class="role-item">AI Solutions</span>
-                    </span>
-                </div>
-                
-                <p class="hero-description" data-scroll data-scroll-speed="1">
-                    Full-stack developer with a journey from graphics design to backend architecture. 
-                    Contributing to open-source as a CachyOS team member while exploring the frontiers of AI/ML.
-                </p>
-                
-                <div class="hero-cta" data-scroll data-scroll-speed="0.5">
-                    <a href="#portfolio" class="btn btn-primary magnetic" data-cursor="pointer">
-                        <span class="btn-text">View My Work</span>
-                        <span class="btn-icon">
-                            <svg width="20" height="20" viewBox="0 0 20 20">
-                                <path d="M10 0L8.59 1.41L15.17 8H0v2h15.17l-6.58 6.59L10 18l10-8z"/>
-                            </svg>
-                        </span>
-                    </a>
-                    <a href="#contact" class="btn btn-outline magnetic" data-cursor="pointer">
-                        <span class="btn-text">Get In Touch</span>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="hero-visual" data-scroll data-scroll-speed="3">
-                <div class="floating-cards">
-                    <div class="floating-card" data-tilt>
-                        <div class="card-content">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                    </div>
-                    <div class="floating-card" data-tilt>
-                        <div class="card-content">
-                            <i class="fab fa-swift"></i>
-                            <span>Swift</span>
-                        </div>
-                    </div>
-                    <div class="floating-card" data-tilt>
-                        <div class="card-content">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                    </div>
-                    <div class="floating-card" data-tilt>
-                        <div class="card-content">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="hero-scroll-indicator" data-cursor="pointer">
-            <div class="scroll-mouse">
-                <div class="scroll-wheel"></div>
-            </div>
-            <span class="scroll-text">Scroll to explore</span>
-        </div>
-    </section>
-
-    <!-- About Section with Parallax -->
-    <section class="about-section" id="about" data-scroll-section>
-        <div class="about-background">
-            <div class="parallax-layer" data-scroll data-scroll-speed="-2">
-                <div class="shape shape-1"></div>
-            </div>
-            <div class="parallax-layer" data-scroll data-scroll-speed="-1">
-                <div class="shape shape-2"></div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="section-header" data-scroll>
-                <span class="section-label">About Me</span>
-                <h2 class="section-title" data-splitting>
-                    <span class="line">Creative Developer</span>
-                    <span class="line">& Problem Solver</span>
-                </h2>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-text" data-scroll data-scroll-speed="1">
-                    <div class="text-block">
-                        <p class="lead">
-                            I'm a full-stack developer with a unique journey that spans from 
-                            <span class="highlight">graphics design</span> to 
-                            <span class="highlight">backend architecture</span>.
-                        </p>
-                        <p>
-                            My diverse background allows me to approach problems holistically, 
-                            creating solutions that are not just functional but also beautiful 
-                            and intuitive. As a team member of <span class="highlight">CachyOS</span>, 
-                            I contribute to one of the most performance-optimized Linux distributions.
-                        </p>
-                        <p>
-                            Currently exploring the exciting world of <span class="highlight">deep learning</span> 
-                            and AI, constantly pushing the boundaries of what's possible in technology.
-                        </p>
+        <div class="ultra-hero-content">
+            <div class="ultra-hero-inner">
+                <div class="ultra-hero-text">
+                    <div class="ultra-hero-label">
+                        Full-Stack Developer
                     </div>
                     
-                    <div class="about-stats">
-                        <div class="stat-item" data-scroll>
-                            <span class="stat-number" data-count="6">0</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-item" data-scroll>
-                            <span class="stat-number" data-count="50">0</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat-item" data-scroll>
-                            <span class="stat-number" data-count="15">0</span>
-                            <span class="stat-label">Technologies</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-visual" data-scroll data-scroll-speed="2">
-                    <div class="timeline-3d">
-                        <div class="timeline-line"></div>
-                        <div class="timeline-items">
-                            <div class="timeline-item" data-year="2018">
-                                <div class="item-icon">
-                                    <i class="fas fa-palette"></i>
-                                </div>
-                                <div class="item-content">
-                                    <h4>Graphics Designer</h4>
-                                    <p>Started with visual design</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item" data-year="2019">
-                                <div class="item-icon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <div class="item-content">
-                                    <h4>Frontend Developer</h4>
-                                    <p>Transitioned to web development</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item" data-year="2020">
-                                <div class="item-icon">
-                                    <i class="fas fa-mobile-alt"></i>
-                                </div>
-                                <div class="item-content">
-                                    <h4>Mobile Developer</h4>
-                                    <p>Mastered iOS development</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item" data-year="2022">
-                                <div class="item-icon">
-                                    <i class="fas fa-server"></i>
-                                </div>
-                                <div class="item-content">
-                                    <h4>Backend Developer</h4>
-                                    <p>Full-stack expertise</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item active" data-year="Now">
-                                <div class="item-icon">
-                                    <i class="fas fa-brain"></i>
-                                </div>
-                                <div class="item-content">
-                                    <h4>AI/ML Explorer</h4>
-                                    <p>Deep learning & open source</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section with Interactive 3D -->
-    <section class="skills-section" id="skills" data-scroll-section>
-        <div class="container">
-            <div class="section-header" data-scroll>
-                <span class="section-label">Skills & Expertise</span>
-                <h2 class="section-title" data-splitting>
-                    <span class="line">Technologies</span>
-                    <span class="line">I Work With</span>
-                </h2>
-            </div>
-            
-            <div class="skills-container">
-                <div class="skills-3d-scene">
-                    <canvas id="skills-canvas"></canvas>
-                </div>
-                
-                <div class="skills-grid" data-scroll>
-                    <div class="skill-category">
-                        <h3 class="category-title">Frontend</h3>
-                        <div class="skill-items">
-                            <div class="skill-item" data-skill="React" data-level="95">
-                                <i class="fab fa-react"></i>
-                                <span>React</span>
-                            </div>
-                            <div class="skill-item" data-skill="TypeScript" data-level="90">
-                                <i class="fab fa-js"></i>
-                                <span>TypeScript</span>
-                            </div>
-                            <div class="skill-item" data-skill="CSS/SCSS" data-level="92">
-                                <i class="fab fa-sass"></i>
-                                <span>CSS/SCSS</span>
-                            </div>
-                        </div>
-                    </div>
+                    <h1 class="ultra-hero-title">
+                        <span class="ultra-hero-title-line">I craft</span>
+                        <span class="ultra-hero-title-line">digital</span>
+                        <span class="ultra-hero-title-line">experiences</span>
+                    </h1>
                     
-                    <div class="skill-category">
-                        <h3 class="category-title">Backend</h3>
-                        <div class="skill-items">
-                            <div class="skill-item" data-skill="Node.js" data-level="88">
-                                <i class="fab fa-node-js"></i>
-                                <span>Node.js</span>
-                            </div>
-                            <div class="skill-item" data-skill="Python" data-level="85">
-                                <i class="fab fa-python"></i>
-                                <span>Python</span>
-                            </div>
-                            <div class="skill-item" data-skill="MongoDB" data-level="82">
-                                <i class="fas fa-database"></i>
-                                <span>MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3 class="category-title">Mobile & Others</h3>
-                        <div class="skill-items">
-                            <div class="skill-item" data-skill="Swift" data-level="87">
-                                <i class="fab fa-swift"></i>
-                                <span>Swift</span>
-                            </div>
-                            <div class="skill-item" data-skill="React Native" data-level="80">
-                                <i class="fab fa-react"></i>
-                                <span>React Native</span>
-                            </div>
-                            <div class="skill-item" data-skill="AI/ML" data-level="75">
-                                <i class="fas fa-brain"></i>
-                                <span>AI/ML</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section with WebGL Transitions -->
-    <section class="portfolio-section" id="portfolio" data-scroll-section>
-        <div class="container">
-            <div class="section-header" data-scroll>
-                <span class="section-label">Portfolio</span>
-                <h2 class="section-title" data-splitting>
-                    <span class="line">Featured</span>
-                    <span class="line">Projects</span>
-                </h2>
-            </div>
-            
-            <div class="portfolio-filter" data-scroll>
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="design">Design</button>
-                <button class="filter-btn" data-filter="ai">AI/ML</button>
-            </div>
-            
-            <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <div class="portfolio-item" data-category="web" data-scroll>
-                    <div class="item-wrapper" data-cursor="view">
-                        <div class="item-image">
-                            <img src="img/portfolio/1.png" alt="E-Commerce Platform">
-                            <div class="image-reveal"></div>
-                        </div>
-                        <div class="item-content">
-                            <span class="item-category">Web Development</span>
-                            <h3 class="item-title">Modern E-Commerce</h3>
-                            <p class="item-description">Full-stack platform with real-time inventory</p>
-                            <div class="item-tech">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
-                            </div>
-                        </div>
-                        <div class="item-overlay">
-                            <div class="overlay-content">
-                                <a href="#" class="overlay-link" data-cursor="pointer">
-                                    <span>View Project</span>
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="portfolio-item" data-category="mobile" data-scroll>
-                    <div class="item-wrapper" data-cursor="view">
-                        <div class="item-image">
-                            <img src="img/portfolio/2.png" alt="Fitness App">
-                            <div class="image-reveal"></div>
-                        </div>
-                        <div class="item-content">
-                            <span class="item-category">iOS Development</span>
-                            <h3 class="item-title">FitTracker Pro</h3>
-                            <p class="item-description">Native iOS fitness app with HealthKit</p>
-                            <div class="item-tech">
-                                <span>Swift</span>
-                                <span>SwiftUI</span>
-                                <span>HealthKit</span>
-                            </div>
-                        </div>
-                        <div class="item-overlay">
-                            <div class="overlay-content">
-                                <a href="#" class="overlay-link" data-cursor="pointer">
-                                    <span>View Project</span>
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="portfolio-item" data-category="ai" data-scroll>
-                    <div class="item-wrapper" data-cursor="view">
-                        <div class="item-image">
-                            <img src="img/portfolio/3.png" alt="AI Project">
-                            <div class="image-reveal"></div>
-                        </div>
-                        <div class="item-content">
-                            <span class="item-category">Machine Learning</span>
-                            <h3 class="item-title">Medical Image AI</h3>
-                            <p class="item-description">Deep learning for medical diagnosis</p>
-                            <div class="item-tech">
-                                <span>TensorFlow</span>
-                                <span>Python</span>
-                                <span>OpenCV</span>
-                            </div>
-                        </div>
-                        <div class="item-overlay">
-                            <div class="overlay-content">
-                                <a href="#" class="overlay-link" data-cursor="pointer">
-                                    <span>View Project</span>
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Photography Section ---->
-    <section class="photography-section" id="photography" data-scroll-section>
-        <div class="photography-background">
-            <div class="parallax-layer" data-scroll data-scroll-speed="-3">
-                <div class="photo-shape photo-shape-1"></div>
-            </div>
-            <div class="parallax-layer" data-scroll data-scroll-speed="-1">
-                <div class="photo-shape photo-shape-2"></div>
-            </div>
-        </div>
-        
-        <div class="container">
-            <div class="section-header" data-scroll>
-                <span class="section-label">Photography</span>
-                <h2 class="section-title" data-splitting>
-                    <span class="line">Capturing</span>
-                    <span class="line">Moments</span>
-                </h2>
-                <p class="section-description">
-                    Through my lens, I capture the beauty of the world around us. 
-                    From breathtaking landscapes to intimate portraits, each image tells a story.
-                </p>
-            </div>
-            
-            <div class="photo-filter" data-scroll>
-                <button class="photo-filter-btn active" data-filter="all">All</button>
-                <button class="photo-filter-btn" data-filter="landscape">Landscape</button>
-                <button class="photo-filter-btn" data-filter="portrait">Portrait</button>
-                <button class="photo-filter-btn" data-filter="street">Street</button>
-                <button class="photo-filter-btn" data-filter="nature">Nature</button>
-            </div>
-            
-            <div class="photo-gallery" id="photo-gallery">
-                <!-- Photo 1 - Landscape -->
-                <div class="photo-item" data-category="landscape" data-scroll>
-                    <div class="photo-wrapper" data-cursor="view">
-                        <div class="photo-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop" alt="Mountain Landscape" loading="lazy">
-                            <div class="photo-overlay">
-                                <div class="photo-info">
-                                    <h4>Golden Hour Mountains</h4>
-                                    <p>Captured during sunrise in the Alps</p>
-                                    <div class="photo-meta">
-                                        <span><i class="fas fa-camera"></i> Canon EOS R5</span>
-                                        <span><i class="fas fa-eye"></i> f/8.0</span>
-                                        <span><i class="fas fa-clock"></i> 1/250s</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Photo 2 - Portrait -->
-                <div class="photo-item" data-category="portrait" data-scroll>
-                    <div class="photo-wrapper" data-cursor="view">
-                        <div class="photo-image">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=800&fit=crop" alt="Portrait Photography" loading="lazy">
-                            <div class="photo-overlay">
-                                <div class="photo-info">
-                                    <h4>Natural Beauty</h4>
-                                    <p>Studio portrait with natural lighting</p>
-                                    <div class="photo-meta">
-                                        <span><i class="fas fa-camera"></i> Canon EOS R5</span>
-                                        <span><i class="fas fa-eye"></i> f/2.8</span>
-                                        <span><i class="fas fa-clock"></i> 1/125s</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Photo 3 - Street -->
-                <div class="photo-item" data-category="street" data-scroll>
-                    <div class="photo-wrapper" data-cursor="view">
-                        <div class="photo-image">
-                            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop" alt="Street Photography" loading="lazy">
-                            <div class="photo-overlay">
-                                <div class="photo-info">
-                                    <h4>City Lights</h4>
-                                    <p>Night street photography in Tokyo</p>
-                                    <div class="photo-meta">
-                                        <span><i class="fas fa-camera"></i> Sony A7III</span>
-                                        <span><i class="fas fa-eye"></i> f/1.4</span>
-                                        <span><i class="fas fa-clock"></i> 1/60s</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Photo 4 - Nature -->
-                <div class="photo-item" data-category="nature" data-scroll>
-                    <div class="photo-wrapper" data-cursor="view">
-                        <div class="photo-image">
-                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=800&fit=crop" alt="Forest Path" loading="lazy">
-                            <div class="photo-overlay">
-                                <div class="photo-info">
-                                    <h4>Forest Path</h4>
-                                    <p>Misty morning in the forest</p>
-                                    <div class="photo-meta">
-                                        <span><i class="fas fa-camera"></i> Canon EOS R5</span>
-                                        <span><i class="fas fa-eye"></i> f/5.6</span>
-                                        <span><i class="fas fa-clock"></i> 1/100s</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Photo 5 - Landscape -->
-                <div class="photo-item" data-category="landscape" data-scroll>
-                    <div class="photo-wrapper" data-cursor="view">
-                        <div class="photo-image">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop" alt="Lake Reflection" loading="lazy">
-                            <div class="photo-overlay">
-                                <div class="photo-info">
-                                    <h4>Perfect Reflection</h4>
-                                    <p>Calm lake at dawn</p>
-                                    <div class="photo-meta">
-                                        <span><i class="fas fa-camera"></i> Canon EOS R5</span>
-                                        <span><i class="fas fa-eye"></i> f/11</span>
-                                        <span><i class="fas fa-clock"></i> 1/30s</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Photo 6 - Street -->
-                <div class="photo-item" data-category="street" data-scroll>
-                    <div class="photo-wrapper" data-cursor="view">
-                        <div class="photo-image">
-                            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&h=800&fit=crop" alt="Urban Architecture" loading="lazy">
-                            <div class="photo-overlay">
-                                <div class="photo-info">
-                                    <h4>Urban Geometry</h4>
-                                    <p>Modern architecture patterns</p>
-                                    <div class="photo-meta">
-                                        <span><i class="fas fa-camera"></i> Sony A7III</span>
-                                        <span><i class="fas fa-eye"></i> f/8.0</span>
-                                        <span><i class="fas fa-clock"></i> 1/200s</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact" data-scroll-section>
-        <div class="container">
-            <div class="section-header" data-scroll>
-                <span class="section-label">Get In Touch</span>
-                <h2 class="section-title" data-splitting>
-                    <span class="line">Let's Work</span>
-                    <span class="line">Together</span>
-                </h2>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info" data-scroll>
-                    <p class="contact-text">
-                        I'm always interested in hearing about new projects and opportunities.
-                        Whether you have a question or just want to say hi, feel free to reach out!
+                    <p class="ultra-hero-subtitle">
+                        Passionate developer with expertise spanning from graphics design 
+                        to backend architecture. Contributing to CachyOS while exploring 
+                        the frontiers of AI and machine learning.
                     </p>
                     
-                    <div class="contact-links">
-                        <a href="mailto:ddh4r4m@gmail.com" class="contact-link" data-cursor="pointer">
-                            <i class="fas fa-envelope"></i>
-                            <span>ddh4r4m@gmail.com</span>
+                    <div class="ultra-hero-cta">
+                        <a href="#work" class="ultra-btn ultra-btn--accent" data-magnetic="0.3" data-cursor>
+                            View My Work
+                            <svg width="14" height="14" viewBox="0 0 14 14">
+                                <path d="M13 1L1 13M13 1h-12M13 1v12" stroke="currentColor" stroke-width="1" fill="none"/>
+                            </svg>
                         </a>
-                        <a href="https://github.com/ddh4r4m" class="contact-link" data-cursor="pointer">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="https://linkedin.com/in/ddh4r4m" class="contact-link" data-cursor="pointer">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://medium.com/@ddh4r4m" class="contact-link" data-cursor="pointer">
-                            <i class="fab fa-medium"></i>
-                            <span>Medium</span>
+                        <a href="#contact" class="ultra-btn" data-magnetic="0.3" data-cursor>
+                            Get In Touch
                         </a>
                     </div>
                 </div>
                 
-                <div class="contact-form" data-scroll>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" required>
-                            <label for="name">Your Name</label>
+                <div class="ultra-hero-visual">
+                    <div class="ultra-hero-image" data-parallax="0.2">
+                        <!-- Abstract geometric shape -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="ultra-section ultra-section--grey" id="about" data-scroll-section>
+        <div class="ultra-container">
+            <div class="ultra-section-header">
+                <h2 class="ultra-section-title reveal">About Me</h2>
+                <p class="ultra-section-subtitle reveal">Developer, Designer, Problem Solver</p>
+            </div>
+            
+            <div class="ultra-grid ultra-grid--asymmetric">
+                <div class="reveal">
+                    <div class="text-large">
+                        Hello! I'm Dharam, a software developer based in India who enjoys 
+                        creating things that live on the internet. My interest in development 
+                        started back in 2018 when I decided to try creating custom graphics.
+                    </div>
+                    
+                    <div class="text-medium" style="margin-top: var(--space-m);">
+                        Fast-forward to today, and I've had the privilege of working on diverse 
+                        projects ranging from graphics design to backend architecture. I'm also 
+                        a proud <span style="color: var(--color-accent); font-weight: 600;">team member of CachyOS</span>, 
+                        contributing to one of the most performance-optimized Linux distributions.
+                    </div>
+                    
+                    <div class="text-medium" style="margin-top: var(--space-m);">
+                        Here are a few technologies I've been working with recently:
+                    </div>
+                    
+                    <div class="ultra-grid ultra-grid--2col" style="margin-top: var(--space-s); gap: var(--space-xs);">
+                        <div class="text-mono" style="color: var(--color-grey-600);">→ JavaScript (ES6+)</div>
+                        <div class="text-mono" style="color: var(--color-grey-600);">→ React</div>
+                        <div class="text-mono" style="color: var(--color-grey-600);">→ Node.js</div>
+                        <div class="text-mono" style="color: var(--color-grey-600);">→ Swift</div>
+                        <div class="text-mono" style="color: var(--color-grey-600);">→ Python</div>
+                        <div class="text-mono" style="color: var(--color-grey-600);">→ TensorFlow</div>
+                    </div>
+                </div>
+                
+                <div class="reveal" data-parallax="0.1">
+                    <div class="ultra-card" style="padding: 0; overflow: hidden; height: 500px;">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%); position: relative;">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; color: white; opacity: 0.3;">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div style="position: absolute; bottom: var(--space-m); left: var(--space-m); color: white;">
+                                <div class="text-mono" style="margin-bottom: var(--space-2xs); color: rgba(255,255,255,0.8);">Full-Stack Developer</div>
+                                <div style="font-family: var(--font-display); font-size: var(--font-size-2xl); font-weight: 600;">Dharam Dhurandhar</div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" required>
-                            <label for="email">Your Email</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultra-Premium Experience Section -->
+    <section class="ultra-section" id="experience" data-scroll-section>
+        <div class="ultra-container">
+            <div class="ultra-section-header">
+                <h2 class="ultra-section-title reveal">Where I've Crafted</h2>
+                <p class="ultra-section-subtitle reveal">
+                    A journey through different domains of technology, from pixels to servers
+                </p>
+            </div>
+            
+            <div class="ultra-grid ultra-grid--3col">
+                <div class="ultra-card reveal" data-magnetic="0.1">
+                    <div class="ultra-experience-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="ultra-card-content">
+                        <div class="ultra-card-title">Frontend Artistry</div>
+                        <div class="ultra-card-text">
+                            Crafting pixel-perfect interfaces that breathe life into digital experiences, 
+                            where every interaction tells a story.
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" rows="5" required></textarea>
-                            <label for="message">Your Message</label>
+                        <div class="ultra-experience-skills">
+                            <span class="ultra-skill-tag">React</span>
+                            <span class="ultra-skill-tag">TypeScript</span>
+                            <span class="ultra-skill-tag">Next.js</span>
+                            <span class="ultra-skill-tag">Three.js</span>
                         </div>
-                        <button type="submit" class="btn btn-primary magnetic" data-cursor="pointer">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-icon">
-                                <i class="fas fa-paper-plane"></i>
-                            </span>
-                        </button>
-                    </form>
+                    </div>
+                </div>
+                
+                <div class="ultra-card reveal" data-magnetic="0.1">
+                    <div class="ultra-experience-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="ultra-card-content">
+                        <div class="ultra-card-title">Backend Architecture</div>
+                        <div class="ultra-card-text">
+                            Building the invisible foundations that power digital experiences, 
+                            architecting systems that scale beyond imagination.
+                        </div>
+                        <div class="ultra-experience-skills">
+                            <span class="ultra-skill-tag">Node.js</span>
+                            <span class="ultra-skill-tag">Python</span>
+                            <span class="ultra-skill-tag">PostgreSQL</span>
+                            <span class="ultra-skill-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-card reveal" data-magnetic="0.1">
+                    <div class="ultra-experience-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <div class="ultra-card-content">
+                        <div class="ultra-card-title">Mobile Innovation</div>
+                        <div class="ultra-card-text">
+                            Creating native experiences that feel natural in your hands, 
+                            pushing the boundaries of what's possible on mobile.
+                        </div>
+                        <div class="ultra-experience-skills">
+                            <span class="ultra-skill-tag">Swift</span>
+                            <span class="ultra-skill-tag">SwiftUI</span>
+                            <span class="ultra-skill-tag">Core ML</span>
+                            <span class="ultra-skill-tag">HealthKit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="ultra-section ultra-section--dark" id="work" data-scroll-section>
+        <div class="ultra-container">
+            <div class="ultra-section-header">
+                <h2 class="ultra-section-title reveal" style="color: white;">Featured Work</h2>
+                <p class="ultra-section-subtitle reveal" style="color: rgba(255,255,255,0.7);">
+                    A selection of recent projects that showcase my skills across different domains
+                </p>
+            </div>
+            
+            <div class="ultra-grid ultra-grid--3col">
+                <div class="ultra-card reveal" data-magnetic="0.1">
+                    <div class="ultra-card-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="E-Commerce Analytics" loading="lazy">
+                    </div>
+                    <div class="ultra-card-content">
+                        <div class="ultra-card-title">E-Commerce Analytics</div>
+                        <div class="ultra-card-text">
+                            Full-stack analytics dashboard with real-time data visualization, 
+                            inventory management, and sales tracking capabilities.
+                        </div>
+                        <div class="ultra-card-meta">
+                            <span class="ultra-card-tag">React</span>
+                            <span class="ultra-card-tag">Node.js</span>
+                            <span class="ultra-card-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-card reveal" data-magnetic="0.1">
+                    <div class="ultra-card-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=500&fit=crop" alt="FitTracker iOS" loading="lazy">
+                    </div>
+                    <div class="ultra-card-content">
+                        <div class="ultra-card-title">FitTracker iOS</div>
+                        <div class="ultra-card-text">
+                            Native iOS fitness application with HealthKit integration and 
+                            personalized recommendations using machine learning.
+                        </div>
+                        <div class="ultra-card-meta">
+                            <span class="ultra-card-tag">Swift</span>
+                            <span class="ultra-card-tag">SwiftUI</span>
+                            <span class="ultra-card-tag">Core ML</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-card reveal" data-magnetic="0.1">
+                    <div class="ultra-card-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop" alt="AI Medical Diagnosis" loading="lazy">
+                    </div>
+                    <div class="ultra-card-content">
+                        <div class="ultra-card-title">AI Medical Diagnosis</div>
+                        <div class="ultra-card-text">
+                            Deep learning model for medical image analysis achieving 94% 
+                            accuracy in detecting anomalies in X-ray images.
+                        </div>
+                        <div class="ultra-card-meta">
+                            <span class="ultra-card-tag">TensorFlow</span>
+                            <span class="ultra-card-tag">Python</span>
+                            <span class="ultra-card-tag">OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultra-Premium Photography Section -->
+    <section class="ultra-section ultra-section--grey" id="photography" data-scroll-section>
+        <div class="ultra-container">
+            <div class="ultra-section-header">
+                <h2 class="ultra-section-title reveal">Visual Narratives</h2>
+                <p class="ultra-section-subtitle reveal">
+                    When code meets canvas — capturing the world through my lens, 
+                    finding beauty in the intersection of light and shadow
+                </p>
+            </div>
+            
+            <div class="ultra-photography-masonry">
+                <div class="ultra-photo-item ultra-photo-item--large reveal" data-magnetic="0.05" data-fullscreen="img/photography/IMG_2016.png">
+                    <div class="ultra-photo-container" data-parallax="0.1">
+                        <img src="img/photography/IMG_2016.png" alt="Portfolio Shot 1" loading="lazy">
+                        <div class="ultra-photo-overlay">
+                            <div class="ultra-photo-meta">
+                                <div class="text-mono" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-2xs);">Featured</div>
+                                <div class="ultra-photo-title">Creative Vision</div>
+                                <div class="ultra-photo-details">Click to view full resolution</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-photo-item ultra-photo-item--medium reveal" data-magnetic="0.05" data-fullscreen="img/photography/IMG_0764.png">
+                    <div class="ultra-photo-container" data-parallax="0.05">
+                        <img src="img/photography/IMG_0764.png" alt="Portfolio Shot 2" loading="lazy">
+                        <div class="ultra-photo-overlay">
+                            <div class="ultra-photo-meta">
+                                <div class="text-mono" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-2xs);">Moment</div>
+                                <div class="ultra-photo-title">Captured</div>
+                                <div class="ultra-photo-details">Click to expand</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-photo-item ultra-photo-item--small reveal" data-magnetic="0.05" data-fullscreen="img/photography/IMG_1369.png">
+                    <div class="ultra-photo-container" data-parallax="0.08">
+                        <img src="img/photography/IMG_1369.png" alt="Portfolio Shot 3" loading="lazy">
+                        <div class="ultra-photo-overlay">
+                            <div class="ultra-photo-meta">
+                                <div class="ultra-photo-title">Memory</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-photo-item ultra-photo-item--medium reveal" data-magnetic="0.05" data-fullscreen="img/photography/IMG_1393.png">
+                    <div class="ultra-photo-container" data-parallax="0.06">
+                        <img src="img/photography/IMG_1393.png" alt="Portfolio Shot 4" loading="lazy">
+                        <div class="ultra-photo-overlay">
+                            <div class="ultra-photo-meta">
+                                <div class="text-mono" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-2xs);">Journey</div>
+                                <div class="ultra-photo-title">Through Lens</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-photo-item ultra-photo-item--large reveal" data-magnetic="0.05" data-fullscreen="img/photography/IMG_1860.png">
+                    <div class="ultra-photo-container" data-parallax="0.04">
+                        <img src="img/photography/IMG_1860.png" alt="Portfolio Shot 5" loading="lazy">
+                        <div class="ultra-photo-overlay">
+                            <div class="ultra-photo-meta">
+                                <div class="text-mono" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-2xs);">Perspective</div>
+                                <div class="ultra-photo-title">Unique View</div>
+                                <div class="ultra-photo-details">Full resolution available</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-photo-item ultra-photo-item--small reveal" data-magnetic="0.05" data-fullscreen="img/photography/IMG_2053.png">
+                    <div class="ultra-photo-container" data-parallax="0.07">
+                        <img src="img/photography/IMG_2053.png" alt="Portfolio Shot 6" loading="lazy">
+                        <div class="ultra-photo-overlay">
+                            <div class="ultra-photo-meta">
+                                <div class="ultra-photo-title">Snapshot</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-photo-item ultra-photo-item--medium reveal" data-magnetic="0.05" data-fullscreen="img/photography/IMG_2093.png">
+                    <div class="ultra-photo-container" data-parallax="0.09">
+                        <img src="img/photography/IMG_2093.png" alt="Portfolio Shot 7" loading="lazy">
+                        <div class="ultra-photo-overlay">
+                            <div class="ultra-photo-meta">
+                                <div class="text-mono" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-2xs);">Artistry</div>
+                                <div class="ultra-photo-title">Visual Story</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-photo-item ultra-photo-item--small reveal" data-magnetic="0.05" data-fullscreen="img/photography/IMG_2347.png">
+                    <div class="ultra-photo-container" data-parallax="0.03">
+                        <img src="img/photography/IMG_2347.png" alt="Portfolio Shot 8" loading="lazy">
+                        <div class="ultra-photo-overlay">
+                            <div class="ultra-photo-meta">
+                                <div class="ultra-photo-title">Frame</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fullscreen Image Modal -->
+            <div class="ultra-fullscreen-modal" id="fullscreenModal">
+                <div class="ultra-fullscreen-backdrop"></div>
+                <div class="ultra-fullscreen-content">
+                    <button class="ultra-fullscreen-close" data-cursor>&times;</button>
+                    <img class="ultra-fullscreen-image" src="" alt="Fullscreen Image" style="display: none;">
+                    <div class="ultra-fullscreen-nav">
+                        <button class="ultra-fullscreen-prev" data-cursor>‹</button>
+                        <button class="ultra-fullscreen-next" data-cursor>›</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultra-Premium Contact Section -->
+    <section class="ultra-section ultra-section--dark" id="contact" data-scroll-section>
+        <div class="ultra-container">
+            <div class="ultra-contact-wrapper">
+                <div class="ultra-contact-content">
+                    <div class="ultra-section-header">
+                        <h2 class="ultra-section-title reveal" style="color: white;">Let's Create Something Extraordinary</h2>
+                        <p class="ultra-section-subtitle reveal" style="color: rgba(255,255,255,0.7);">
+                            Ready to bring your vision to life? Whether it's a groundbreaking product, 
+                            an innovative experience, or just a creative conversation — I'm here.
+                        </p>
+                    </div>
+                    
+                    <div class="ultra-contact-grid">
+                        <div class="ultra-contact-info reveal">
+                            <div class="ultra-contact-item" data-magnetic="0.1">
+                                <div class="ultra-contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="ultra-contact-details">
+                                    <div class="text-mono" style="color: rgba(255,255,255,0.6); margin-bottom: var(--space-2xs);">Email</div>
+                                    <a href="mailto:ddh4r4m@gmail.com" class="ultra-contact-link">ddh4r4m@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="ultra-contact-item" data-magnetic="0.1">
+                                <div class="ultra-contact-icon">
+                                    <i class="fab fa-telegram"></i>
+                                </div>
+                                <div class="ultra-contact-details">
+                                    <div class="text-mono" style="color: rgba(255,255,255,0.6); margin-bottom: var(--space-2xs);">Telegram</div>
+                                    <a href="https://t.me/ddh4r4m" class="ultra-contact-link">@ddh4r4m</a>
+                                </div>
+                            </div>
+                            
+                            <div class="ultra-contact-item" data-magnetic="0.1">
+                                <div class="ultra-contact-icon">
+                                    <i class="fab fa-discord"></i>
+                                </div>
+                                <div class="ultra-contact-details">
+                                    <div class="text-mono" style="color: rgba(255,255,255,0.6); margin-bottom: var(--space-2xs);">Discord</div>
+                                    <div class="ultra-contact-link">ddh4r4m</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ultra-contact-cta reveal">
+                            <a href="mailto:ddh4r4m@gmail.com" class="ultra-btn ultra-btn--accent" data-magnetic="0.3" data-cursor>
+                                Start a Conversation
+                                <svg width="14" height="14" viewBox="0 0 14 14">
+                                    <path d="M13 1L1 13M13 1h-12M13 1v12" stroke="currentColor" stroke-width="1" fill="none"/>
+                                </svg>
+                            </a>
+                            
+                            <div class="ultra-social-links">
+                                <a href="https://github.com/ddh4r4m" class="ultra-social-link" data-magnetic="0.2" data-cursor>
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/ddh4r4m" class="ultra-social-link" data-magnetic="0.2" data-cursor>
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://medium.com/@ddh4r4m" class="ultra-social-link" data-magnetic="0.2" data-cursor>
+                                    <i class="fab fa-medium"></i>
+                                </a>
+                                <a href="https://twitter.com/ddh4r4m" class="ultra-social-link" data-magnetic="0.2" data-cursor>
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ultra-contact-visual" data-parallax="0.2">
+                    <div class="ultra-contact-shape"></div>
+                </div>
+            </div>
+            
+            <div class="ultra-footer">
+                <div class="ultra-footer-content">
+                    <div class="text-mono" style="color: rgba(255,255,255,0.4);">
+                        Designed & Crafted with Passion
+                    </div>
+                    <div class="text-mono" style="color: rgba(255,255,255,0.6);">
+                        © 2024 Dharam Dhurandhar
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Scripts -->
-    <script src="js/advanced-portfolio.js"></script>
+    <script src="js/ultra-premium.js"></script>
 </body>
 </html>
