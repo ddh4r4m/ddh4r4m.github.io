@@ -1,479 +1,713 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dharam Dhurandhar</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharam Dhurandhar - Full-Stack Developer & Creative Technologist</title>
+    <meta name="description" content="Full-stack developer with expertise in graphics design, web, mobile, and backend development. Team member of CachyOS, exploring AI/ML and creating exceptional digital experiences.">
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/MotionPathPlugin.min.js"></script>
+    
+    <!-- Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Splitting.js for text animations -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    
+    <!-- Locomotive Scroll for smooth scrolling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/advanced-portfolio.css">
 </head>
+<body data-scroll-container>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <path class="preloader-path" d="M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" 
+                          stroke="#6366f1" stroke-width="4" fill="none" 
+                          stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+                </svg>
+            </div>
+            <div class="preloader-text">Loading Experience</div>
+            <div class="preloader-progress">
+                <div class="preloader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
 
-<body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+        <div class="cursor-text"></div>
+    </div>
 
-    <!-- header-start -->
-    <header>
-        <div class="header-area ">
-            <div id="sticky-header" class="main-header-area">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-xl-3 col-lg-2">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="img/logo.png" alt="">
-                                </a>
-                            </div>
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" data-scroll-sticky>
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#hero" data-cursor="pointer">
+                    <span class="logo-text">DD</span>
+                    <span class="logo-subtitle">Developer</span>
+                </a>
+            </div>
+            
+            <div class="navbar-menu">
+                <a href="#about" class="nav-link" data-cursor="pointer">
+                    <span data-text="About">About</span>
+                </a>
+                <a href="#skills" class="nav-link" data-cursor="pointer">
+                    <span data-text="Skills">Skills</span>
+                </a>
+                <a href="#portfolio" class="nav-link" data-cursor="pointer">
+                    <span data-text="Work">Work</span>
+                </a>
+                <a href="#photography" class="nav-link" data-cursor="pointer">
+                    <span data-text="Photos">Photos</span>
+                </a>
+                <a href="#contact" class="nav-link" data-cursor="pointer">
+                    <span data-text="Contact">Contact</span>
+                </a>
+            </div>
+
+            <div class="navbar-actions">
+                <button class="theme-toggle" data-cursor="pointer">
+                    <span class="theme-icon"></span>
+                </button>
+                <button class="menu-toggle" data-cursor="pointer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with WebGL Background -->
+    <section class="hero-section" id="hero" data-scroll-section>
+        <div class="hero-background">
+            <canvas id="hero-canvas"></canvas>
+            <div class="hero-particles"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-intro" data-scroll data-scroll-speed="2">
+                <div class="hero-label">
+                    <span class="label-text">Hello, I'm</span>
+                    <span class="label-line"></span>
+                </div>
+                
+                <h1 class="hero-title" data-splitting>
+                    <span class="line">Dharam</span>
+                    <span class="line gradient-text">Dhurandhar</span>
+                </h1>
+                
+                <div class="hero-roles">
+                    <span class="role-prefix">I craft</span>
+                    <span class="role-carousel">
+                        <span class="role-item active">Beautiful Interfaces</span>
+                        <span class="role-item">Scalable Systems</span>
+                        <span class="role-item">Mobile Experiences</span>
+                        <span class="role-item">AI Solutions</span>
+                    </span>
+                </div>
+                
+                <p class="hero-description" data-scroll data-scroll-speed="1">
+                    Full-stack developer with a journey from graphics design to backend architecture. 
+                    Contributing to open-source as a CachyOS team member while exploring the frontiers of AI/ML.
+                </p>
+                
+                <div class="hero-cta" data-scroll data-scroll-speed="0.5">
+                    <a href="#portfolio" class="btn btn-primary magnetic" data-cursor="pointer">
+                        <span class="btn-text">View My Work</span>
+                        <span class="btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M10 0L8.59 1.41L15.17 8H0v2h15.17l-6.58 6.59L10 18l10-8z"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline magnetic" data-cursor="pointer">
+                        <span class="btn-text">Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual" data-scroll data-scroll-speed="3">
+                <div class="floating-cards">
+                    <div class="floating-card" data-tilt>
+                        <div class="card-content">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
                         </div>
-                        <div class="col-xl-6 col-lg-7">
-                            <div class="main-menu  d-none d-lg-block">
-                                <nav>
-                                    <ul id="navigation">
-                                        <li><a class="active" href="index.html">home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                 <li><a href="portfolio.html">Portfolio</a></li>
-                                                 <li><a href="elements.html">elements</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
+                    </div>
+                    <div class="floating-card" data-tilt>
+                        <div class="card-content">
+                            <i class="fab fa-swift"></i>
+                            <span>Swift</span>
                         </div>
-                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                            <div class="Appointment">
-                                <div class="book_btn d-none d-lg-block">
-                                    <a  href="#">Contact Me</a>
+                    </div>
+                    <div class="floating-card" data-tilt>
+                        <div class="card-content">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <div class="floating-card" data-tilt>
+                        <div class="card-content">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-indicator" data-cursor="pointer">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span class="scroll-text">Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section with Parallax -->
+    <section class="about-section" id="about" data-scroll-section>
+        <div class="about-background">
+            <div class="parallax-layer" data-scroll data-scroll-speed="-2">
+                <div class="shape shape-1"></div>
+            </div>
+            <div class="parallax-layer" data-scroll data-scroll-speed="-1">
+                <div class="shape shape-2"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header" data-scroll>
+                <span class="section-label">About Me</span>
+                <h2 class="section-title" data-splitting>
+                    <span class="line">Creative Developer</span>
+                    <span class="line">& Problem Solver</span>
+                </h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-scroll data-scroll-speed="1">
+                    <div class="text-block">
+                        <p class="lead">
+                            I'm a full-stack developer with a unique journey that spans from 
+                            <span class="highlight">graphics design</span> to 
+                            <span class="highlight">backend architecture</span>.
+                        </p>
+                        <p>
+                            My diverse background allows me to approach problems holistically, 
+                            creating solutions that are not just functional but also beautiful 
+                            and intuitive. As a team member of <span class="highlight">CachyOS</span>, 
+                            I contribute to one of the most performance-optimized Linux distributions.
+                        </p>
+                        <p>
+                            Currently exploring the exciting world of <span class="highlight">deep learning</span> 
+                            and AI, constantly pushing the boundaries of what's possible in technology.
+                        </p>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item" data-scroll>
+                            <span class="stat-number" data-count="6">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item" data-scroll>
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item" data-scroll>
+                            <span class="stat-number" data-count="15">0</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual" data-scroll data-scroll-speed="2">
+                    <div class="timeline-3d">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-items">
+                            <div class="timeline-item" data-year="2018">
+                                <div class="item-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div class="item-content">
+                                    <h4>Graphics Designer</h4>
+                                    <p>Started with visual design</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" data-year="2019">
+                                <div class="item-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="item-content">
+                                    <h4>Frontend Developer</h4>
+                                    <p>Transitioned to web development</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" data-year="2020">
+                                <div class="item-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="item-content">
+                                    <h4>Mobile Developer</h4>
+                                    <p>Mastered iOS development</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" data-year="2022">
+                                <div class="item-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="item-content">
+                                    <h4>Backend Developer</h4>
+                                    <p>Full-stack expertise</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item active" data-year="Now">
+                                <div class="item-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="item-content">
+                                    <h4>AI/ML Explorer</h4>
+                                    <p>Deep learning & open source</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- header-end -->
-
-    <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="single_slider  d-flex align-items-center slider_bg_1">
-            <div class="shap_pattern d-none d-lg-block">
-                <img src="img/about/grid.png" alt="">
-            </div>
-            <div class="social_links">
-                <ul>
-                    <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                    <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                </ul>
-            </div>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-12">
-                        <div class="slider_text text-center">
-                            <h3>
-                                Hello This is Dharam
-                            </h3>
-                            <span>Software Developer __ UI.UX Designer</span>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- slider_area_end -->
+    </section>
 
-    <!-- service_area  -->
-    <div class="service_area">
+    <!-- Skills Section with Interactive 3D -->
+    <section class="skills-section" id="skills" data-scroll-section>
         <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-65">
-                        <span>Service Provided</span>
-                        <h3>Building Apps, Websites  <br>
-                                & UI Products</h3>
-                    </div>
-                </div>
+            <div class="section-header" data-scroll>
+                <span class="section-label">Skills & Expertise</span>
+                <h2 class="section-title" data-splitting>
+                    <span class="line">Technologies</span>
+                    <span class="line">I Work With</span>
+                </h2>
             </div>
-            <div class="row">
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_service text-center">
-                        <div class="icon">
-                            <img src="img/svg_icon/1.svg" alt="">
-                        </div>
-                        <h3>Graphic design</h3>
-                        <p>As a talented Graphic Designer, I possess a strong skill set in creating visually captivating designs that communicate effectively. With a deep understanding of design principles and an eye for detail, I bring concepts to life through my expertise in Adobe Suites and Figma.</p>
-                    </div>
+            
+            <div class="skills-container">
+                <div class="skills-3d-scene">
+                    <canvas id="skills-canvas"></canvas>
                 </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_service text-center">
-                        <div class="icon">
-                            <img src="img/svg_icon/2.svg" alt="">
+                
+                <div class="skills-grid" data-scroll>
+                    <div class="skill-category">
+                        <h3 class="category-title">Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="React" data-level="95">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-item" data-skill="TypeScript" data-level="90">
+                                <i class="fab fa-js"></i>
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="skill-item" data-skill="CSS/SCSS" data-level="92">
+                                <i class="fab fa-sass"></i>
+                                <span>CSS/SCSS</span>
+                            </div>
                         </div>
-                        <h3>Web design</h3>
-                        <p>With my skills in web design, I have a passion for creating visually striking and intuitive websites that make a strong impact. I excel in blending design principles, such as layout composition, color theory, typography, and image selection, to deliver captivating online experiences. My expertise lies in crafting cohesive websites that align with clients' goals and branding, leaving a lasting impression on users.
-                        </p>
                     </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_service text-center">
-                        <div class="icon">
-                            <img src="img/svg_icon/3.svg" alt="">
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">Backend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Node.js" data-level="88">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-item" data-skill="Python" data-level="85">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item" data-skill="MongoDB" data-level="82">
+                                <i class="fas fa-database"></i>
+                                <span>MongoDB</span>
+                            </div>
                         </div>
-                        <h3>Mobile app</h3>
-                        <p>With proficiency in Swift and some in JSX, I possess the skills to deliver high-quality code and meet project deadlines. I thrive in problem-solving and analytical tasks, paying meticulous attention to detail. I strongly believe in effective communication and collaboration, working seamlessly with cross-functional teams to create exceptional mobile experiences.</p>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">Mobile & Others</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Swift" data-level="87">
+                                <i class="fab fa-swift"></i>
+                                <span>Swift</span>
+                            </div>
+                            <div class="skill-item" data-skill="React Native" data-level="80">
+                                <i class="fab fa-react"></i>
+                                <span>React Native</span>
+                            </div>
+                            <div class="skill-item" data-skill="AI/ML" data-level="75">
+                                <i class="fas fa-brain"></i>
+                                <span>AI/ML</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--/ service_area  -->
+    </section>
 
-    <!-- portfolio_area -->
-    <div class="portfolio_area portfolio_bg_1">
+    <!-- Portfolio Section with WebGL Transitions -->
+    <section class="portfolio-section" id="portfolio" data-scroll-section>
         <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title white_text text-center">
-                        <span>Portfolios</span>
-                        <h3>Some of my awesome <br>
-                                stuffs here</h3>
+            <div class="section-header" data-scroll>
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title" data-splitting>
+                    <span class="line">Featured</span>
+                    <span class="line">Projects</span>
+                </h2>
+            </div>
+            
+            <div class="portfolio-filter" data-scroll>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-category="web" data-scroll>
+                    <div class="item-wrapper" data-cursor="view">
+                        <div class="item-image">
+                            <img src="img/portfolio/1.png" alt="E-Commerce Platform">
+                            <div class="image-reveal"></div>
+                        </div>
+                        <div class="item-content">
+                            <span class="item-category">Web Development</span>
+                            <h3 class="item-title">Modern E-Commerce</h3>
+                            <p class="item-description">Full-stack platform with real-time inventory</p>
+                            <div class="item-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="item-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="overlay-link" data-cursor="pointer">
+                                    <span>View Project</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="mobile" data-scroll>
+                    <div class="item-wrapper" data-cursor="view">
+                        <div class="item-image">
+                            <img src="img/portfolio/2.png" alt="Fitness App">
+                            <div class="image-reveal"></div>
+                        </div>
+                        <div class="item-content">
+                            <span class="item-category">iOS Development</span>
+                            <h3 class="item-title">FitTracker Pro</h3>
+                            <p class="item-description">Native iOS fitness app with HealthKit</p>
+                            <div class="item-tech">
+                                <span>Swift</span>
+                                <span>SwiftUI</span>
+                                <span>HealthKit</span>
+                            </div>
+                        </div>
+                        <div class="item-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="overlay-link" data-cursor="pointer">
+                                    <span>View Project</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="ai" data-scroll>
+                    <div class="item-wrapper" data-cursor="view">
+                        <div class="item-image">
+                            <img src="img/portfolio/3.png" alt="AI Project">
+                            <div class="image-reveal"></div>
+                        </div>
+                        <div class="item-content">
+                            <span class="item-category">Machine Learning</span>
+                            <h3 class="item-title">Medical Image AI</h3>
+                            <p class="item-description">Deep learning for medical diagnosis</p>
+                            <div class="item-tech">
+                                <span>TensorFlow</span>
+                                <span>Python</span>
+                                <span>OpenCV</span>
+                            </div>
+                        </div>
+                        <div class="item-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="overlay-link" data-cursor="pointer">
+                                    <span>View Project</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--/ portfolio_area -->
+    </section>
 
-    <!-- portfolio_image_area  -->
-    <div class="portfolio_image_area">
+    <!-- Photography Section ---->
+    <section class="photography-section" id="photography" data-scroll-section>
+        <div class="photography-background">
+            <div class="parallax-layer" data-scroll data-scroll-speed="-3">
+                <div class="photo-shape photo-shape-1"></div>
+            </div>
+            <div class="parallax-layer" data-scroll data-scroll-speed="-1">
+                <div class="photo-shape photo-shape-2"></div>
+            </div>
+        </div>
+        
         <div class="container">
-            <div class="row">
-                <div class="col-xl-5 col-md-5">
-                    <div class="single_Portfolio">
-                        <div class="portfolio_thumb">
-                            <img src="img/portfolio/1.png" alt="">
-                        </div>
-                        <a href="img/portfolio/1.png" class="popup popup-image"></a>
-                        <div class="portfolio_hover">
-                            <div class="title">
-                                    <h3>Product Design</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-7 col-md-7">
-                    <div class="single_Portfolio">
-                        <div class="portfolio_thumb">
-                            <img src="img/portfolio/2.png" alt="">
-                        </div>
-                        <a href="img/portfolio/2.png" class="popup popup-image"></a>
-                        <div class="portfolio_hover">
-                            <div class="title">
-                                    <h3>Product Design</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 col-lg-4">
-                    <div class="single_Portfolio">
-                        <div class="portfolio_thumb">
-                            <img src="img/portfolio/3.png" alt="">
-                        </div>
-                        <a href="img/portfolio/3.png" class="popup popup-image"></a>
-                        <div class="portfolio_hover">
-                            <div class="title">
-                                    <h3>Product Design</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6 col-lg-4">
-                    <div class="single_Portfolio">
-                        <div class="portfolio_thumb">
-                            <img src="img/portfolio/4.png" alt="">
-                        </div>
-                        <a href="img/portfolio/4.png" class="popup popup-image"></a>
-                        <div class="portfolio_hover">
-                            <div class="title">
-                                    <h3>Product Design</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-12 col-lg-4">
-                    <div class="single_Portfolio">
-                        <div class="portfolio_thumb">
-                            <img src="img/portfolio/5.png" alt="">
-                        </div>
-                        <a href="img/portfolio/5.png" class="popup popup-image"></a>
-                        <div class="portfolio_hover">
-                            <div class="title">
-                                    <h3>Product Design</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header" data-scroll>
+                <span class="section-label">Photography</span>
+                <h2 class="section-title" data-splitting>
+                    <span class="line">Capturing</span>
+                    <span class="line">Moments</span>
+                </h2>
+                <p class="section-description">
+                    Through my lens, I capture the beauty of the world around us. 
+                    From breathtaking landscapes to intimate portraits, each image tells a story.
+                </p>
             </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="more_portfolio text-center">
-                        <a class="line_btn" href="#">More Folio</a>
+            
+            <div class="photo-filter" data-scroll>
+                <button class="photo-filter-btn active" data-filter="all">All</button>
+                <button class="photo-filter-btn" data-filter="landscape">Landscape</button>
+                <button class="photo-filter-btn" data-filter="portrait">Portrait</button>
+                <button class="photo-filter-btn" data-filter="street">Street</button>
+                <button class="photo-filter-btn" data-filter="nature">Nature</button>
+            </div>
+            
+            <div class="photo-gallery" id="photo-gallery">
+                <!-- Photo 1 - Landscape -->
+                <div class="photo-item" data-category="landscape" data-scroll>
+                    <div class="photo-wrapper" data-cursor="view">
+                        <div class="photo-image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop" alt="Mountain Landscape" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>Golden Hour Mountains</h4>
+                                    <p>Captured during sunrise in the Alps</p>
+                                    <div class="photo-meta">
+                                        <span><i class="fas fa-camera"></i> Canon EOS R5</span>
+                                        <span><i class="fas fa-eye"></i> f/8.0</span>
+                                        <span><i class="fas fa-clock"></i> 1/250s</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Photo 2 - Portrait -->
+                <div class="photo-item" data-category="portrait" data-scroll>
+                    <div class="photo-wrapper" data-cursor="view">
+                        <div class="photo-image">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=800&fit=crop" alt="Portrait Photography" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>Natural Beauty</h4>
+                                    <p>Studio portrait with natural lighting</p>
+                                    <div class="photo-meta">
+                                        <span><i class="fas fa-camera"></i> Canon EOS R5</span>
+                                        <span><i class="fas fa-eye"></i> f/2.8</span>
+                                        <span><i class="fas fa-clock"></i> 1/125s</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Photo 3 - Street -->
+                <div class="photo-item" data-category="street" data-scroll>
+                    <div class="photo-wrapper" data-cursor="view">
+                        <div class="photo-image">
+                            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop" alt="Street Photography" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>City Lights</h4>
+                                    <p>Night street photography in Tokyo</p>
+                                    <div class="photo-meta">
+                                        <span><i class="fas fa-camera"></i> Sony A7III</span>
+                                        <span><i class="fas fa-eye"></i> f/1.4</span>
+                                        <span><i class="fas fa-clock"></i> 1/60s</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Photo 4 - Nature -->
+                <div class="photo-item" data-category="nature" data-scroll>
+                    <div class="photo-wrapper" data-cursor="view">
+                        <div class="photo-image">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=800&fit=crop" alt="Forest Path" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>Forest Path</h4>
+                                    <p>Misty morning in the forest</p>
+                                    <div class="photo-meta">
+                                        <span><i class="fas fa-camera"></i> Canon EOS R5</span>
+                                        <span><i class="fas fa-eye"></i> f/5.6</span>
+                                        <span><i class="fas fa-clock"></i> 1/100s</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Photo 5 - Landscape -->
+                <div class="photo-item" data-category="landscape" data-scroll>
+                    <div class="photo-wrapper" data-cursor="view">
+                        <div class="photo-image">
+                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop" alt="Lake Reflection" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>Perfect Reflection</h4>
+                                    <p>Calm lake at dawn</p>
+                                    <div class="photo-meta">
+                                        <span><i class="fas fa-camera"></i> Canon EOS R5</span>
+                                        <span><i class="fas fa-eye"></i> f/11</span>
+                                        <span><i class="fas fa-clock"></i> 1/30s</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Photo 6 - Street -->
+                <div class="photo-item" data-category="street" data-scroll>
+                    <div class="photo-wrapper" data-cursor="view">
+                        <div class="photo-image">
+                            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&h=800&fit=crop" alt="Urban Architecture" loading="lazy">
+                            <div class="photo-overlay">
+                                <div class="photo-info">
+                                    <h4>Urban Geometry</h4>
+                                    <p>Modern architecture patterns</p>
+                                    <div class="photo-meta">
+                                        <span><i class="fas fa-camera"></i> Sony A7III</span>
+                                        <span><i class="fas fa-eye"></i> f/8.0</span>
+                                        <span><i class="fas fa-clock"></i> 1/200s</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--/ portfolio_image_area  -->
+    </section>
 
-    <!-- about_me  -->
-    <div class="about_me">
-        <div class="about_large_title d-none d-lg-block">
-                About
-        </div>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact" data-scroll-section>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-md-6">
-                    <div class="about_e_details">
-                        <h3>About me</h3>
-                        <p>Hello, I'm Dharam Dhurandhar, an experienced professional specializing in iOS Development with a strong background in React, Node.js, and UI/UX design. With a passion for creating innovative and user-friendly mobile applications, I strive to make a positive impact through my work. </p>
-
-                           <p> Throughout my years of experience in the field, I have honed my skills in Swift and JSX, allowing me to deliver high-quality code and meet project deadlines. I am well-versed in leveraging the power of Adobe Suites and Figma to create visually captivating designs that enhance the user experience. </p>
-                            
-                            <p>I thrive in problem-solving and analytical tasks, paying meticulous attention to detail. Collaborating closely with cross-functional teams, I have successfully contributed to the development and maintenance of iOS applications, resulting in increased user engagement, reduced app crashes, and enhanced performance. My experience in UI/UX design has allowed me to implement captivating designs and seamless user experiences, contributing to higher app downloads and improved satisfaction.</p>
-                        <div class="download_cv">
-                            <a class="boxed-btn3" href="#">Download CV</a>
-                        </div>
+            <div class="section-header" data-scroll>
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title" data-splitting>
+                    <span class="line">Let's Work</span>
+                    <span class="line">Together</span>
+                </h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-scroll>
+                    <p class="contact-text">
+                        I'm always interested in hearing about new projects and opportunities.
+                        Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:ddh4r4m@gmail.com" class="contact-link" data-cursor="pointer">
+                            <i class="fas fa-envelope"></i>
+                            <span>ddh4r4m@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/ddh4r4m" class="contact-link" data-cursor="pointer">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/ddh4r4m" class="contact-link" data-cursor="pointer">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://medium.com/@ddh4r4m" class="contact-link" data-cursor="pointer">
+                            <i class="fab fa-medium"></i>
+                            <span>Medium</span>
+                        </a>
                     </div>
                 </div>
-                <div class="col-xl-6 col-md-6">
-                    <div class="about_img">
-                        <div class="color_pattern d-none d-lg-block">
-                            <img src="img/about/color_grid.png" alt="">
+                
+                <div class="contact-form" data-scroll>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
                         </div>
-                        <div class="my_Pic">
-                                <img src="img/about/about.png" alt="">
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Your Email</label>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary magnetic" data-cursor="pointer">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-    <!--/ about_me  -->
+    </section>
 
-    <div class="counter_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_counter text-center">
-                        <h3>
-                            <span class="counter" >520 </span><span>+</span>
-                        </h3>
-                        <p>Total Projects</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_counter text-center">
-                        <h3>
-                            <span class="counter">244 </span>
-                        </h3>
-                        <p>On Going Projects</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_counter text-center">
-                        <h3>
-                            <span class="counter" >95 </span> <span>%</span>
-                        </h3>
-                        <p>Job Success</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- testimonial_area  -->
-    <div class="testimonial_area ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="testmonial_active owl-carousel">
-                            <div class="single_carousel">
-                                    <div class="single_testmonial text-center">
-                                            <div class="quote">
-                                                <img src="img/testmonial/quote.svg" alt="">
-                                            </div>
-                                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br> 
-                                                    sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
-                                                    Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                                            <div class="testmonial_author">
-                                                <div class="thumb">
-                                                        <img src="img/testmonial/thumb.png" alt="">
-                                                </div>
-                                                <h3>Robert Thomson</h3>
-                                                <span>Business Owner</span>
-                                            </div>
-                                        </div>
-                            </div>
-                            <div class="single_carousel">
-                                    <div class="single_testmonial text-center">
-                                            <div class="quote">
-                                                <img src="img/testmonial/quote.svg" alt="">
-                                            </div>
-                                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br> 
-                                                    sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
-                                                    Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                                            <div class="testmonial_author">
-                                                <div class="thumb">
-                                                        <img src="img/testmonial/thumb.png" alt="">
-                                                </div>
-                                                <h3>Robert Thomson</h3>
-                                                <span>Business Owner</span>
-                                            </div>
-                                        </div>
-                            </div>
-                            <div class="single_carousel">
-                                    <div class="single_testmonial text-center">
-                                            <div class="quote">
-                                                <img src="img/testmonial/quote.svg" alt="">
-                                            </div>
-                                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br> 
-                                                    sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
-                                                    Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                                            <div class="testmonial_author">
-                                                <div class="thumb">
-                                                        <img src="img/testmonial/thumb.png" alt="">
-                                                </div>
-                                                <h3>Robert Thomson</h3>
-                                                <span>Business Owner</span>
-                                            </div>
-                                        </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /testimonial_area  -->
-    
-    <div class="discuss_projects">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="project_text text-center">
-                        <h3>Let’s discuss for a project</h3>
-                        <p>I'm thrilled to connect with you and have a conversation about potential projects where I can apply my versatile skill set. With my expertise in iOS development, React, Node.js, and UI/UX design, I am eager to contribute to your project's success. I'm also open to exploring additional tech stacks and innovative solutions that can elevate your project even further. By collaborating closely and understanding your unique requirements, we can create customized and impactful solutions that exceed your expectations. Let's explore how my skills, along with potential new technologies, can bring value to your project. Together, we can embark on an exciting journey and achieve remarkable results. I look forward to our discussion and the opportunity to collaborate with you.</p>
-                        <a class="boxed-btn3" href="#">Start Talking</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- footer start -->
-    <footer class="footer">
-        <div class="footer_top">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-6 col-md-6">
-                        <div class="menu_links">
-                            <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-md-6">
-                        <div class="socail_links">
-                            <ul>
-                                <li><a href="#"> <i class="fa fa-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                                <li><a href="#"> <i class="fa fa-instagram"></i> </a></li>
-                                <li><a href="#"> <i class="fa fa-google-plus"></i> </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy-right_text">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--/ footer end  -->
-
-    <!-- JS here -->
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/scrollIt.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/nice-select.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/gijgo.min.js"></script>
-
-    <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
-
-    <script src="js/main.js"></script>
+    <!-- Scripts -->
+    <script src="js/advanced-portfolio.js"></script>
 </body>
-
 </html>

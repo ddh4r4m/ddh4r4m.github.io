@@ -13,6 +13,9 @@
 // header
 @import 'header';
 
+// hero (modern hero section)
+@import 'hero';
+
 // slider
 @import 'slider';
 
@@ -23,6 +26,12 @@
 @import 'counter';
 // counter
 @import 'about';
+
+// modern about section
+@import 'about-modern';
+
+// skills section
+@import 'skills';
 
 // gallery
 @import '_gallery';
@@ -43,6 +52,9 @@
 @import 'video';
 
 @import 'portfolio';
+
+// modern portfolio section
+@import 'portfolio-modern';
 
 @import 'experts';
 
