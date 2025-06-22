@@ -105,8 +105,303 @@
                 </div>
                 
                 <div class="ultra-hero-visual">
-                    <div class="ultra-hero-image" data-parallax="0.2">
-                        <!-- Abstract geometric shape -->
+                    <div class="ultra-hero-artwork" data-parallax="0.2">
+                        <!-- Advanced Generative Art System -->
+                        <div class="generative-art-system">
+                            <!-- Background Atmospheric Layer -->
+                            <div class="atmospheric-layer">
+                                <div class="atmosphere-canvas">
+                                    <div class="energy-field energy-1"></div>
+                                    <div class="energy-field energy-2"></div>
+                                    <div class="energy-field energy-3"></div>
+                                    <div class="plasma-orb plasma-1"></div>
+                                    <div class="plasma-orb plasma-2"></div>
+                                    <div class="plasma-orb plasma-3"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Secondary Geometric Layer -->
+                            <div class="geometric-layer">
+                                <svg viewBox="0 0 980 980" class="geometric-svg">
+                                    <defs>
+                                        <radialGradient id="geometricGrad" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+                                            <stop offset="70%" style="stop-color:#ff8f6b;stop-opacity:0.4" />
+                                            <stop offset="100%" style="stop-color:#e5501c;stop-opacity:0.1" />
+                                        </radialGradient>
+                                    </defs>
+                                    
+                                    <!-- Large rotating geometry -->
+                                    <g class="mega-geometry">
+                                        <polygon class="mega-poly-1" points="350,120 450,200 420,320 280,320 250,200" 
+                                                fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"
+                                                filter="url(#energyGlow)">
+                                            <animateTransform attributeName="transform" type="rotate" 
+                                                            values="0 350 220;360 350 220" dur="40s" repeatCount="indefinite"/>
+                                        </polygon>
+                                        
+                                        <polygon class="mega-poly-2" points="350,180 400,220 380,280 320,280 300,220" 
+                                                fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5">
+                                            <animateTransform attributeName="transform" type="rotate" 
+                                                            values="360 350 230;0 350 230" dur="30s" repeatCount="indefinite"/>
+                                        </polygon>
+                                        
+                                        <circle class="mega-circle" cx="350" cy="230" r="80" 
+                                               fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"
+                                               stroke-dasharray="10,5">
+                                            <animate attributeName="stroke-dashoffset" values="0;15" dur="3s" repeatCount="indefinite"/>
+                                        </circle>
+                                    </g>
+                                </svg>
+                            </div>
+                            
+                            <!-- Primary Canvas Layer -->
+                            <div class="art-canvas-primary">
+                                <svg viewBox="0 0 700 700" class="primary-svg">
+                                    <defs>
+                                        <!-- Advanced Gradient Definitions -->
+                                        <radialGradient id="coreGradient" cx="50%" cy="50%" r="50%">
+                                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                                            <stop offset="30%" style="stop-color:#ff8f6b;stop-opacity:0.9" />
+                                            <stop offset="70%" style="stop-color:#ff6b35;stop-opacity:0.7" />
+                                            <stop offset="100%" style="stop-color:#e5501c;stop-opacity:0.3" />
+                                        </radialGradient>
+                                        
+                                        <linearGradient id="fluidGradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="objectBoundingBox">
+                                            <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:0.9">
+                                                <animate attributeName="stop-color" values="#ff6b35;#ff8f6b;#e5501c;#ff6b35" dur="8s" repeatCount="indefinite"/>
+                                            </stop>
+                                            <stop offset="50%" style="stop-color:#ff8f6b;stop-opacity:0.7">
+                                                <animate attributeName="stop-color" values="#ff8f6b;#e5501c;#ff6b35;#ff8f6b" dur="6s" repeatCount="indefinite"/>
+                                            </stop>
+                                            <stop offset="100%" style="stop-color:#e5501c;stop-opacity:0.5">
+                                                <animate attributeName="stop-color" values="#e5501c;#ff6b35;#ff8f6b;#e5501c" dur="10s" repeatCount="indefinite"/>
+                                            </stop>
+                                        </linearGradient>
+                                        
+                                        <!-- Advanced Filter Effects -->
+                                        <filter id="morphBlur" x="-20%" y="-20%" width="140%" height="140%">
+                                            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1.2 0"/>
+                                            <feMerge>
+                                                <feMergeNode in="SourceGraphic"/>
+                                                <feMergeNode in="blur"/>
+                                            </feMerge>
+                                        </filter>
+                                        
+                                        <filter id="liquidDistortion" x="-50%" y="-50%" width="200%" height="200%">
+                                            <feTurbulence baseFrequency="0.02" numOctaves="3" result="turbulence"/>
+                                            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="8"/>
+                                        </filter>
+                                        
+                                        <filter id="energyGlow" x="-50%" y="-50%" width="200%" height="200%">
+                                            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                                            <feMerge>
+                                                <feMergeNode in="coloredBlur"/>
+                                                <feMergeNode in="SourceGraphic"/>
+                                            </feMerge>
+                                        </filter>
+                                    </defs>
+                                    
+                                    <!-- Fluid Morphing Core -->
+                                    <g class="fluid-core">
+                                        <path class="morph-blob-1" d="M250,100 C350,120 380,200 360,280 C340,360 260,380 180,340 C100,300 80,220 120,160 C160,100 200,90 250,100 Z" 
+                                              fill="url(#fluidGradient)" filter="url(#liquidDistortion)" opacity="0.8">
+                                            <animateTransform attributeName="transform" attributeType="XML" type="rotate" 
+                                                            values="0 250 250;360 250 250" dur="20s" repeatCount="indefinite"/>
+                                        </path>
+                                        
+                                        <path class="morph-blob-2" d="M250,120 C320,140 350,210 330,270 C310,330 240,350 170,320 C100,290 80,230 110,180 C140,130 190,110 250,120 Z" 
+                                              fill="url(#coreGradient)" filter="url(#morphBlur)" opacity="0.6">
+                                            <animateTransform attributeName="transform" attributeType="XML" type="rotate" 
+                                                            values="360 250 250;0 250 250" dur="25s" repeatCount="indefinite"/>
+                                        </path>
+                                    </g>
+                                    
+                                    <!-- Geometric Constellation -->
+                                    <g class="geometric-constellation">
+                                        <!-- Dodecagon -->
+                                        <polygon class="poly-complex poly-1" 
+                                                points="250,150 280,160 300,190 300,220 280,250 250,260 220,250 200,220 200,190 220,160" 
+                                                fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" filter="url(#energyGlow)">
+                                            <animateTransform attributeName="transform" attributeType="XML" type="rotate" 
+                                                            values="0 250 205;360 250 205" dur="15s" repeatCount="indefinite"/>
+                                        </polygon>
+                                        
+                                        <!-- Hexagonal Framework -->
+                                        <g class="hex-framework">
+                                            <polygon class="hex hex-1" points="250,180 270,190 270,210 250,220 230,210 230,190" 
+                                                    fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.4)" stroke-width="1">
+                                                <animateTransform attributeName="transform" attributeType="XML" type="scale" 
+                                                                values="1;1.2;1" dur="4s" repeatCount="indefinite"/>
+                                            </polygon>
+                                            
+                                            <polygon class="hex hex-2" points="280,200 295,208 295,222 280,230 265,222 265,208" 
+                                                    fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.3)" stroke-width="0.8">
+                                                <animateTransform attributeName="transform" attributeType="XML" type="scale" 
+                                                                values="1;0.8;1" dur="6s" repeatCount="indefinite"/>
+                                            </polygon>
+                                            
+                                            <polygon class="hex hex-3" points="220,200 235,208 235,222 220,230 205,222 205,208" 
+                                                    fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.3)" stroke-width="0.8">
+                                                <animateTransform attributeName="transform" attributeType="XML" type="scale" 
+                                                                values="1;1.1;1" dur="5s" repeatCount="indefinite"/>
+                                            </polygon>
+                                        </g>
+                                    </g>
+                                    
+                                    <!-- Neural Network Pattern -->
+                                    <g class="neural-network">
+                                        <g class="neural-nodes">
+                                            <circle class="node node-1" cx="200" cy="180" r="3" fill="rgba(255,255,255,0.8)">
+                                                <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <circle class="node node-2" cx="300" cy="200" r="2.5" fill="rgba(255,255,255,0.7)">
+                                                <animate attributeName="r" values="2.5;5;2.5" dur="4s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <circle class="node node-3" cx="250" cy="280" r="2" fill="rgba(255,255,255,0.6)">
+                                                <animate attributeName="r" values="2;4.5;2" dur="3.5s" repeatCount="indefinite"/>
+                                            </circle>
+                                            <circle class="node node-4" cx="180" cy="240" r="2.8" fill="rgba(255,255,255,0.65)">
+                                                <animate attributeName="r" values="2.8;5.5;2.8" dur="4.2s" repeatCount="indefinite"/>
+                                            </circle>
+                                        </g>
+                                        
+                                        <g class="neural-connections">
+                                            <line class="connection conn-1" x1="200" y1="180" x2="300" y2="200" 
+                                                  stroke="rgba(255,255,255,0.3)" stroke-width="0.8" opacity="0.6">
+                                                <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+                                            </line>
+                                            <line class="connection conn-2" x1="300" y1="200" x2="250" y2="280" 
+                                                  stroke="rgba(255,255,255,0.3)" stroke-width="0.8" opacity="0.4">
+                                                <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" repeatCount="indefinite"/>
+                                            </line>
+                                            <line class="connection conn-3" x1="250" y1="280" x2="180" y2="240" 
+                                                  stroke="rgba(255,255,255,0.3)" stroke-width="0.8" opacity="0.5">
+                                                <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+                                            </line>
+                                            <line class="connection conn-4" x1="180" y1="240" x2="200" y2="180" 
+                                                  stroke="rgba(255,255,255,0.3)" stroke-width="0.8" opacity="0.3">
+                                                <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.8s" repeatCount="indefinite"/>
+                                            </line>
+                                        </g>
+                                    </g>
+                                    
+                                    <!-- Central Brand Identity -->
+                                    <g class="brand-core">
+                                        <circle class="brand-bg" cx="250" cy="205" r="35" fill="rgba(255,255,255,0.08)" 
+                                               stroke="rgba(255,255,255,0.2)" stroke-width="1">
+                                            <animate attributeName="stroke-opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <text class="brand-text" x="250" y="215" text-anchor="middle" fill="white" 
+                                              font-family="var(--font-display)" font-size="20" font-weight="800">
+                                            DD
+                                            <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+                                        </text>
+                                    </g>
+                                </svg>
+                            </div>
+                            
+                            <!-- Advanced Particle System -->
+                            <div class="quantum-particles">
+                                <div class="particle-field">
+                                    <div class="quantum-particle qp-1"></div>
+                                    <div class="quantum-particle qp-2"></div>
+                                    <div class="quantum-particle qp-3"></div>
+                                    <div class="quantum-particle qp-4"></div>
+                                    <div class="quantum-particle qp-5"></div>
+                                    <div class="quantum-particle qp-6"></div>
+                                    <div class="quantum-particle qp-7"></div>
+                                    <div class="quantum-particle qp-8"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Advanced Particle Storm Layer -->
+                            <div class="particle-storm">
+                                <div class="storm-field">
+                                    <div class="storm-particle sp-1"></div>
+                                    <div class="storm-particle sp-2"></div>
+                                    <div class="storm-particle sp-3"></div>
+                                    <div class="storm-particle sp-4"></div>
+                                    <div class="storm-particle sp-5"></div>
+                                    <div class="storm-particle sp-6"></div>
+                                    <div class="storm-particle sp-7"></div>
+                                    <div class="storm-particle sp-8"></div>
+                                    <div class="storm-particle sp-9"></div>
+                                    <div class="storm-particle sp-10"></div>
+                                    <div class="storm-particle sp-11"></div>
+                                    <div class="storm-particle sp-12"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Electromagnetic Field Layer -->
+                            <div class="electromagnetic-layer">
+                                <svg viewBox="0 0 980 980" class="electromagnetic-svg">
+                                    <defs>
+                                        <filter id="electromagnetic" x="-50%" y="-50%" width="200%" height="200%">
+                                            <feGaussianBlur stdDeviation="2" result="blur"/>
+                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 0.5 1 0 0  0 0 1 0.8 0  0 0 0 1 0"/>
+                                        </filter>
+                                    </defs>
+                                    
+                                    <!-- Electromagnetic field lines -->
+                                    <g class="field-lines">
+                                        <path class="field-line fl-1" d="M100,350 Q350,200 600,350" 
+                                              fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" 
+                                              filter="url(#electromagnetic)">
+                                            <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
+                                        </path>
+                                        <path class="field-line fl-2" d="M150,300 Q350,450 550,300" 
+                                              fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" 
+                                              filter="url(#electromagnetic)">
+                                            <animate attributeName="opacity" values="0.2;0.7;0.2" dur="5s" repeatCount="indefinite"/>
+                                        </path>
+                                        <path class="field-line fl-3" d="M200,250 Q350,100 500,250" 
+                                              fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1" 
+                                              filter="url(#electromagnetic)">
+                                            <animate attributeName="opacity" values="0.25;0.6;0.25" dur="3.5s" repeatCount="indefinite"/>
+                                        </path>
+                                        <path class="field-line fl-4" d="M250,200 Q350,500 450,200" 
+                                              fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" 
+                                              filter="url(#electromagnetic)">
+                                            <animate attributeName="opacity" values="0.2;0.9;0.2" dur="6s" repeatCount="indefinite"/>
+                                        </path>
+                                    </g>
+                                    
+                                    <!-- Energy nodes -->
+                                    <g class="energy-nodes">
+                                        <circle class="energy-node en-1" cx="200" cy="200" r="4" 
+                                               fill="rgba(255,255,255,0.9)" filter="url(#electromagnetic)">
+                                            <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle class="energy-node en-2" cx="500" cy="250" r="3" 
+                                               fill="rgba(255,255,255,0.8)" filter="url(#electromagnetic)">
+                                            <animate attributeName="r" values="3;6;3" dur="2.5s" repeatCount="indefinite"/>
+                                        </circle>
+                                        <circle class="energy-node en-3" cx="300" cy="450" r="3.5" 
+                                               fill="rgba(255,255,255,0.7)" filter="url(#electromagnetic)">
+                                            <animate attributeName="r" values="3.5;7;3.5" dur="3s" repeatCount="indefinite"/>
+                                        </circle>
+                                    </g>
+                                </svg>
+                            </div>
+                            
+                            <!-- Holographic Overlay -->
+                            <div class="holographic-overlay">
+                                <div class="holo-grid"></div>
+                                <div class="scan-lines"></div>
+                                <div class="interference-pattern"></div>
+                            </div>
+                            
+                            <!-- Ultra-Advanced Depth Layer -->
+                            <div class="depth-layer">
+                                <div class="depth-orb depth-1"></div>
+                                <div class="depth-orb depth-2"></div>
+                                <div class="depth-orb depth-3"></div>
+                                <div class="depth-orb depth-4"></div>
+                                <div class="depth-orb depth-5"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -436,7 +731,7 @@
             <div class="ultra-contact-wrapper">
                 <div class="ultra-contact-content">
                     <div class="ultra-section-header">
-                        <h2 class="ultra-section-title reveal" style="color: white;">Let's Create Something Extraordinary</h2>
+                        <h2 class="ultra-section-title reveal ultra-contact-title" style="color: white;">Let's Create Something Extraordinary</h2>
                         <p class="ultra-section-subtitle reveal" style="color: rgba(255,255,255,0.7);">
                             Ready to bring your vision to life? Whether it's a groundbreaking product, 
                             an innovative experience, or just a creative conversation — I'm here.
